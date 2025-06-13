@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzeria Fornazzo - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(120deg, #fffbe7 0%, #ffe0b2 100%);
+            color: #2d2d2d;
+        }
+        header {
+            background: linear-gradient(90deg, #fb3737 60%, #ec5454 100%);
+            color: #fff;
+            text-align: center;
+            padding: 60px 0 30px 0;
+            position: relative;
+        }
+        header img {
+            width: 110px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            box-shadow: 0 4px 18px #0002;
+            margin-bottom: 12px;
+        }
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.8em;
+            margin: 0 0 10px 0;
+            letter-spacing: 2px;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 0;
+            font-weight: 500;
+        }
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 8px #0001;
+            text-align: center;
+            padding: 14px 0;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: #8d5524;
+            text-decoration: none;
+            margin: 0 22px;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #eab543;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .about {
+            background: #fff;
+            border-radius: 14px;
+            padding: 36px 28px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 18px #0001;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .about img {
+            width: 180px;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px #0002;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 220px;
+        }
+        .about-text h2 {
+            font-family: 'Pacifico', cursive;
+            color: #8d5524;
+            margin-top: 0;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-section h2 {
+            font-family: 'Pacifico', cursive;
+            color: #8d5524;
+            margin-bottom: 18px;
+        }
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 28px;
+        }
+        .menu-item {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 12px #0001;
+            padding: 20px 16px 18px 16px;
+            text-align: center;
+            transition: transform 0.15s;
+        }
+        .menu-item:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 6px 24px #8d552430;
+        }
+        .menu-item img {
+            width: 100%;
+            max-width: 170px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            box-shadow: 0 2px 8px #0001;
+        }
+        .menu-item h3 {
+            margin: 10px 0 6px 0;
+            color: #8d5524;
+            font-family: 'Pacifico', cursive;
+            font-size: 1.3em;
+        }
+        .menu-item p {
+            font-size: 1em;
+            color: #444;
+        }
+        .contact-section {
+            background: #fff;
+            border-radius: 14px;
+            padding: 36px 28px;
+            box-shadow: 0 4px 18px #0001;
+            margin-bottom: 40px;
+        }
+        .contact-section h2 {
+            font-family: 'Pacifico', cursive;
+            color: #8d5524;
+            margin-top: 0;
+        }
+        .contact-info {
+            margin-bottom: 18px;
+            font-size: 1.08em;
+        }
+        .contact-form label {
+            font-weight: 500;
+            color: #8d5524;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 9px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border: 1px solid #b01e05;
+            border-radius: 6px;
+            font-size: 1em;
+            background: #fffbe7;
+        }
+        .contact-form button {
+            background: linear-gradient(90deg, #fb3737 60%, #ec5454 100%);
+            color: #fff;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 6px;
+            font-size: 1.1em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .contact-form button:hover {
+            background: linear-gradient(90deg, #fb3737 60%, #ec5454 100%);
+        }
+        footer {
+            background: #ec5454;
+            color: #fff;
+            text-align: center;
+            padding: 22px 0;
+            font-size: 1.05em;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 700px) {
+            .about {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 10px;
+            }
+            .about img {
+                margin-bottom: 18px;
+            }
+            .contact-section {
+                padding: 24px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo_fornazzo.jpeg" alt="Logo Pizzeria Fornazzo">
+        <h1>Pizzeria Fornazzo</h1>
+        <p>Tradição e sabor em cada fatia!</p>
+    </header>
+    <nav>
+        <a href="#about">Quem Somos</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="about" class="about">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=400&q=80" alt="Equipe da pizzaria">
+            <div class="about-text">
+                <h2>Quem Somos</h2>
+                <p>
+                    Desde 2025, a Pizzeria Fornazzo oferece pizzas artesanais feitas com ingredientes selecionados e receitas tradicionais da Itália. Nosso compromisso é proporcionar momentos inesquecíveis com muito sabor, qualidade e um ambiente acolhedor para toda a família.
+                </p>
+            </div>
+        </section>
+       <section id="menu" class="menu-section">
+    <h2>Menu</h2>
+    <div style="text-align:center; margin: 32px 0;">
+        <a href="https://www.diggy.menu/684469391e41c717b16ac60d" target="_blank" style="
+            display: inline-block;
+            background: linear-gradient(90deg, #fb3737 60%, #ec5454 100%);
+            color: #fff;
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 2px 12px #0001;
+            transition: background 0.2s;
+        ">
+            Ver Cardápio Completo
+        </a>
+    </div>
+</section>
+        
+        <section id="contact" class="contact-section">
+            <h2>Contato</h2>
+            <div class="contact-info">
+                <strong>Endereço:</strong> Rua Campos Sales, 604 - Centro<br>
+                <strong>Telefone:</strong> (14) 99816-6306<br>
+                <strong>Instagram:</strong> @fornazzopizzeria<br>
+                <strong>Horário de Funcionamento:</strong> Segunda, Quarta, Quinta, Sexta, Sábado e Domingo das 18h às 00h
+            </div> 
+        </section>
+    </div>
+    <footer>
+        &copy; 2025 Pizzaria Zanzotti. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
